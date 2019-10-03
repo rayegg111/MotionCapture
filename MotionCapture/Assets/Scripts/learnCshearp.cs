@@ -25,13 +25,24 @@ public class learnCshearp : MonoBehaviour
     [Header("顏色")]
     public Color color = new Color(0.5f, 0.2f, 0.1f);
     public Color red = Color.red;
-
+    
+    //(非靜態類別)欄位，可放相對應物件
     [Header(""),Tooltip("物件座標")]
     public Transform objops;
     [Tooltip("攝影機")]
     public Camera cam;
     [Tooltip("燈光")]
     public Light lig;
+    //靜態類別，不能宣告成欄位
+    //public Debug deb;
 
-    public Debug deb;
+    private void Start()
+    {
+        //非靜態類別
+        //Camera.depth = 10f; //錯誤寫法
+        cam.depth = 10f;
+
+        //靜態類別
+        Debug.Log ("TEST");
+    }
 }
