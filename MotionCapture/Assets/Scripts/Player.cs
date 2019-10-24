@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
+    public Animator ani;
+
 	void Update ()
     {
-		
+        if (Input.GetKeyDown(KeyCode.Space)) ani.SetTrigger("跳舞觸發器");
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            ani.SetBool("跑步開關", true);
+        }
+        else
+        {
+            ani.SetBool("跑步開關", false);
+        }
 	}
 }
