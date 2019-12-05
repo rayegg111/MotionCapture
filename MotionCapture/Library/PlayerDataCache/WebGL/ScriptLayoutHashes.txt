@@ -1,6 +1,6 @@
 WebGL
 PlayerPath?
-C:/Users/User/Desktop/MotionCapture/game
+C:/Users/User/Desktop/MotionCapture/web
 SceneListBegin?
 Assets/場景/動畫控制.unity
 SceneListEnd?
